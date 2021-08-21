@@ -1,4 +1,7 @@
+import crawler
+title_list, date_list, url_list = crawler.ce_notice_crowler(["https://cms.pknu.ac.kr/ced/main.do","컴퓨터공학과"])
 def ce_notice():
+    global title_list, date_list, url_list
     data = {
   "version": "2.0",
   "template": {
@@ -10,35 +13,51 @@ def ce_notice():
           },
           "items": [
             {
-              "title": "Kakao i Developers",
-              "description": "새로운 AI의 내일과 일상의 변화",
+              "title": title_list[0],
+              "description": date_list[0],
               "imageUrl": "http://k.kakaocdn.net/dn/APR96/btqqH7zLanY/kD5mIPX7TdD2NAxgP29cC0/1x1.jpg",
               "link": {
-                "web": "https://namu.wiki/w/%EB%9D%BC%EC%9D%B4%EC%96%B8(%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%84%EB%A0%8C%EC%A6%88)"
+                "web": url_list[0]
               }
             },
             {
-              "title": "Kakao i Open Builder",
-              "description": "카카오톡 채널 챗봇 만들기",
+              "title": title_list[1],
+              "description": date_list[1],
               "imageUrl": "http://k.kakaocdn.net/dn/N4Epz/btqqHCfF5II/a3kMRckYml1NLPEo7nqTmK/1x1.jpg",
               "link": {
-                "web": "https://namu.wiki/w/%EB%AC%B4%EC%A7%80(%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%84%EB%A0%8C%EC%A6%88)"
+                "web": url_list[1]
               }
             },
             {
-              "title": "Kakao i Voice Service",
-              "description": "보이스봇 / KVS 제휴 신청하기",
+              "title": title_list[2],
+              "description": date_list[2],
               "imageUrl": "http://k.kakaocdn.net/dn/bE8AKO/btqqFHI6vDQ/mWZGNbLIOlTv3oVF1gzXKK/1x1.jpg",
               "link": {
-                "web": "https://namu.wiki/w/%EC%96%B4%ED%94%BC%EC%B9%98"
+                "web": url_list[2]
+              }
+            },
+            {
+              "title": title_list[3],
+              "description": date_list[3],
+              "imageUrl": "http://k.kakaocdn.net/dn/bE8AKO/btqqFHI6vDQ/mWZGNbLIOlTv3oVF1gzXKK/1x1.jpg",
+              "link": {
+                "web": url_list[3]
+              }
+            },
+            {
+              "title": title_list[4],
+              "description": date_list[4],
+              "imageUrl": "http://k.kakaocdn.net/dn/bE8AKO/btqqFHI6vDQ/mWZGNbLIOlTv3oVF1gzXKK/1x1.jpg",
+              "link": {
+                "web": url_list[4]
               }
             }
           ],
           "buttons": [
             {
-              "label": "구경가기",
+              "label": "학과 홈페이지",
               "action": "webLink",
-              "webLinkUrl": "https://namu.wiki/w/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%94%84%EB%A0%8C%EC%A6%88"
+              "webLinkUrl": "https://cms.pknu.ac.kr/ced/main.do"
             }
           ]
         }

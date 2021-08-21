@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from flask import Flask, jsonify, request
-import ssl
-import requests
-# import sql_connect
-import sys
+import jsonhandler
 from werkzeug.utils import secure_filename
 import os
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False #
+@app.route("/notice/ce", methods = ["POST"])
+def ce():
+    return jsonhandler.ce_notice()
 
+
+@app.route("/lib/center", methods = ["POST"])
+def lib_center():
+    return "코로나 19로 휴관중입니다."
 
 # json형식으로 받음
 @app.route("/test_log", methods = ['POST'])

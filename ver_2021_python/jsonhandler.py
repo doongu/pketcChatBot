@@ -1,5 +1,5 @@
 import crawler
-title_list, date_list, url_list = crawler.ce_notice_crawler("https://cms.pknu.ac.kr/ced/main.do","컴퓨터공학과")
+title_list, date_list, url_list = crawler.ce_notice_crawler("https://cms.pknu.ac.kr/ced/main.do")
 def ce_notice():
     global title_list, date_list, url_list
     data = {

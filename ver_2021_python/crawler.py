@@ -5,7 +5,7 @@ import urllib3
 
 urllib3.disable_warnings() 
 
-def ce_notice_crawler(major_name ,url):
+def ce_notice_crawler(url):
     select_url = url
 
     request = requests.get(select_url,verify=False)
@@ -32,4 +32,5 @@ def ce_notice_crawler(major_name ,url):
 
     # print(title_list, date_list, url_list)
     return title_list, date_list, url_list
+
 

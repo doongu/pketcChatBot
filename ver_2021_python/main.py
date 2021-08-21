@@ -18,7 +18,19 @@ def walk_data_to_db():
     json_data = request.get_json()
     print("성공적으로 연동하였습니다.")
     print(json_data)
-    return "성공적으로 walk_data를 넣었습니다."
+    responseBody = {
+    "version": "2.0",
+    "template": {
+      "outputs": [
+        {
+          "simpleText": {
+            "text": "hello I'm Ryan"
+          }
+        }
+      ]
+    }
+  }
+    return jsonify(responseBody)
 
 
 

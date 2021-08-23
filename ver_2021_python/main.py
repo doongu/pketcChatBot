@@ -16,6 +16,7 @@ def ce():
 def lib_center():
     return "코로나 19로 휴관중입니다."
 
+
 # json형식으로 받음
 @app.route("/test_log", methods = ['POST'])
 def walk_data_to_db():
@@ -28,7 +29,7 @@ def walk_data_to_db():
       "outputs": [
         {
           "simpleText": {
-            "text": "hello I'm Ryan"
+            "text": "hello I'm Ryan\nhello"
           }
         }
       ]
@@ -36,7 +37,10 @@ def walk_data_to_db():
   }
     return jsonify(responseBody)
 
-
+# 오호라 부분
+@app.route("/ohora/craw", methods = ["POST"])
+def ohor():
+      return jsonhandler.ohora("./오호라 재고관리.xlsx")
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 80, debug = True)

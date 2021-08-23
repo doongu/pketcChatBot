@@ -29,7 +29,7 @@ def walk_data_to_db():
       "outputs": [
         {
           "simpleText": {
-            "text": "hello I'm Ryan\nhello"
+            "text": "hello I'm Ryan\nasdasd"
           }
         }
       ]
@@ -40,7 +40,7 @@ def walk_data_to_db():
 # 오호라 부분
 @app.route("/ohora/craw", methods = ["POST"])
 def ohor():
-      return jsonhandler.ohora("./오호라 재고관리.xlsx")
+      return jsonhandler.ohora("/pkcebot/pketcChatBot/ver_2021_python/오호라 재고관리.xlsx")
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 80, debug = True)
